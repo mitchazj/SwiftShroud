@@ -14,6 +14,8 @@
 		8E7C9DCB29911CB400773315 /* SwiftShroudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DCA29911CB400773315 /* SwiftShroudTests.swift */; };
 		8E7C9DD529911CB400773315 /* SwiftShroudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DD429911CB400773315 /* SwiftShroudUITests.swift */; };
 		8E7C9DD729911CB400773315 /* SwiftShroudUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DD629911CB400773315 /* SwiftShroudUITestsLaunchTests.swift */; };
+		8E7C9DF6299302A700773315 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7C9DF5299302A700773315 /* KeyboardShortcuts */; };
+		8E7C9DF8299302C500773315 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DF7299302C500773315 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		8E7C9DD029911CB400773315 /* SwiftShroudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShroudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7C9DD429911CB400773315 /* SwiftShroudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShroudUITests.swift; sourceTree = "<group>"; };
 		8E7C9DD629911CB400773315 /* SwiftShroudUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShroudUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E7C9DF7299302C500773315 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7C9DF6299302A700773315 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7C9DB829911CB300773315 /* SwiftShroudApp.swift */,
+				8E7C9DF7299302C500773315 /* Constants.swift */,
 				8E7C9DBA29911CB300773315 /* ContentView.swift */,
 				8E7C9DBC29911CB400773315 /* Assets.xcassets */,
 				8E7C9DC129911CB400773315 /* SwiftShroud.entitlements */,
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = SwiftShroud;
+			packageProductDependencies = (
+				8E7C9DF5299302A700773315 /* KeyboardShortcuts */,
+			);
 			productName = SwiftShroud;
 			productReference = 8E7C9DB529911CB300773315 /* SwiftShroud.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 8E7C9DAC29911CB300773315;
+			packageReferences = (
+				8E7C9DF4299302A600773315 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 8E7C9DB629911CB300773315 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +273,7 @@
 			files = (
 				8E7C9DBB29911CB300773315 /* ContentView.swift in Sources */,
 				8E7C9DB929911CB300773315 /* SwiftShroudApp.swift in Sources */,
+				8E7C9DF8299302C500773315 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azj.SwiftShroud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftShroud/SwiftShroud-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -461,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azj.SwiftShroud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftShroud/SwiftShroud-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -574,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E7C9DF4299302A600773315 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E7C9DF5299302A700773315 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E7C9DF4299302A600773315 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E7C9DAD29911CB300773315 /* Project object */;
 }

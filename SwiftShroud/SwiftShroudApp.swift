@@ -8,9 +8,12 @@
 import SwiftUI
 import Carbon
 import Cocoa
+import KeyboardShortcuts
 
 @main
 struct SwiftShroudApp: App {
+    @StateObject private var appState = AppState()
+    
     init() {
         print("we made it here at least")
     }
@@ -18,6 +21,15 @@ struct SwiftShroudApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+    }
+}
+
+@MainActor
+final class AppState: ObservableObject {
+    init() {
+        KeyboardShortcuts.onKeyUp(for: .toggleUnicornMode) { [self] in
+            print("the keyboard shortcut was hit")
         }
     }
 }
