@@ -14,6 +14,9 @@
 		8E7C9DCB29911CB400773315 /* SwiftShroudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DCA29911CB400773315 /* SwiftShroudTests.swift */; };
 		8E7C9DD529911CB400773315 /* SwiftShroudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DD429911CB400773315 /* SwiftShroudUITests.swift */; };
 		8E7C9DD729911CB400773315 /* SwiftShroudUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DD629911CB400773315 /* SwiftShroudUITestsLaunchTests.swift */; };
+		8E7C9DEA2992525200773315 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DE92992525200773315 /* DDHotKeyCenter.m */; };
+		8E7C9DF02992532500773315 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DEF2992532500773315 /* DDHotKeyUtilities.m */; };
+		8E7C9DF32992536800773315 /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C9DF22992536800773315 /* DDHotKeyTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,13 @@
 		8E7C9DD029911CB400773315 /* SwiftShroudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShroudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7C9DD429911CB400773315 /* SwiftShroudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShroudUITests.swift; sourceTree = "<group>"; };
 		8E7C9DD629911CB400773315 /* SwiftShroudUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShroudUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E7C9DE6299251CA00773315 /* SwiftShroud-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftShroud-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E7C9DE92992525200773315 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		8E7C9DEB2992526500773315 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		8E7C9DEC2992528300773315 /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		8E7C9DEF2992532500773315 /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
+		8E7C9DF12992535700773315 /* DDHotKeyTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDHotKeyTextField.h; sourceTree = "<group>"; };
+		8E7C9DF22992536800773315 /* DDHotKeyTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,13 @@
 				8E7C9DBC29911CB400773315 /* Assets.xcassets */,
 				8E7C9DC129911CB400773315 /* SwiftShroud.entitlements */,
 				8E7C9DBE29911CB400773315 /* Preview Content */,
+				8E7C9DE6299251CA00773315 /* SwiftShroud-Bridging-Header.h */,
+				8E7C9DF22992536800773315 /* DDHotKeyTextField.m */,
+				8E7C9DF12992535700773315 /* DDHotKeyTextField.h */,
+				8E7C9DEF2992532500773315 /* DDHotKeyUtilities.m */,
+				8E7C9DEC2992528300773315 /* DDHotKeyUtilities.h */,
+				8E7C9DE92992525200773315 /* DDHotKeyCenter.m */,
+				8E7C9DEB2992526500773315 /* DDHotKeyCenter.h */,
 			);
 			path = SwiftShroud;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 				TargetAttributes = {
 					8E7C9DB429911CB300773315 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					8E7C9DC529911CB400773315 = {
 						CreatedOnToolsVersion = 14.2;
@@ -260,6 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7C9DBB29911CB300773315 /* ContentView.swift in Sources */,
+				8E7C9DF32992536800773315 /* DDHotKeyTextField.m in Sources */,
+				8E7C9DEA2992525200773315 /* DDHotKeyCenter.m in Sources */,
+				8E7C9DF02992532500773315 /* DDHotKeyUtilities.m in Sources */,
 				8E7C9DB929911CB300773315 /* SwiftShroudApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftShroud/SwiftShroud.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -431,6 +453,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azj.SwiftShroud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftShroud/SwiftShroud-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -440,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftShroud/SwiftShroud.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -456,6 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.azj.SwiftShroud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftShroud/SwiftShroud-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

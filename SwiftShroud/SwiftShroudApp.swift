@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import Carbon
+import Cocoa
 
 @main
 struct SwiftShroudApp: App {
+    init() {
+        print("we made it here at least")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
